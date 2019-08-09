@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { SignInComponent } from './signin/signin.component';
 import { VMessageModule } from '../shared/components/vmessage/vmessage.module';
 import { RouterModule } from '@angular/router';
-import { SignupComponent } from './signup/signup.componen';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
