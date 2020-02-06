@@ -9,6 +9,7 @@ import { PlatformDetectorService } from "src/app/core/platform-detector/platform
 
 @Component({
   templateUrl: './signup.component.html',
+  providers: [ UserNotTakenValidatorService ],
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
