@@ -20,20 +20,20 @@ export class PhotoListComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private photoService: PhotoService
-    ) {}
+  ) { }
 
   ngOnInit(): void {
-    // this.photos = this.activatedRoute.snapshot.data['photos']; outra alternativa
     this.userName = this.activatedRoute.snapshot.params.userName;
-    this.photos = this.activatedRoute.snapshot.data.photos;
+    this.photos = this.activatedRoute.snapshot.data['photos'];
   }
 
   load() {
-    this.photoService.listFromUserPaginated(this.userName, ++this.currentPage)
+    this.photoService
+      .listFromUserPaginated(this.userName, ++this.currentPage)
       .subscribe(photos => {
         this.filter = '';
         this.photos = this.photos.concat(photos);
         if(!photos.length) this.hasMore = false;
-      })
+      });
   }
 }
