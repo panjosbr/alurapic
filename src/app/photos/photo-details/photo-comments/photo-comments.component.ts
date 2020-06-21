@@ -8,6 +8,7 @@ import { switchMap, tap } from 'rxjs/operators';
 @Component({
   selector: 'ap-photo-comments',
   templateUrl: './photo-comments.component.html',
+  styleUrls: ['photo-comments.component.css'],
 })
 export class PhotoCommentsComponent implements OnInit {
 
