@@ -55,4 +55,10 @@ export class PhotoService {
       { commentText },
     );
   }
+
+  removePhoto(photoId: number) {
+    const url = `${API}/photos/${photoId}`;
+
+    return this.http.delete(url);
+  }
 }
