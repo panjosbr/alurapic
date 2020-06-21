@@ -46,4 +46,13 @@ export class PhotoService {
 
     return this.http.get<PhotoComment[]>(url);
   }
+
+  addComment(photoId: number, commentText: string) {
+    const url = `${API}/photos/${photoId}/comments`;
+
+    return this.http.post(
+      url,
+      { commentText },
+    );
+  }
 }
