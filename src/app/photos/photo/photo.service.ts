@@ -61,4 +61,9 @@ export class PhotoService {
 
     return this.http.delete(url);
   }
+
+  like(photoId: number) {
+    const url = `${API}/photos/${photoId}/like`;
+    return this.http.post(url, {}, {observe: 'response'});
+  }
 }
